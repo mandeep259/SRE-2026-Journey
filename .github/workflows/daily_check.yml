@@ -7,14 +7,14 @@ on:
 
 jobs: 
   run_health_check:
-    runs_on: ubuntu@latest
+    runs_on: ubuntu-latest
 
   steps:
     - name: Grab my code
       uses: action/checkout@v4
     
     - name: Setup Python
-      uses: actions/setup@python@v5
+      uses: actions/setup-python@v5
       with: 
         python-version: '3.10'
 
