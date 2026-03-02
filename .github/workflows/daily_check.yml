@@ -1,25 +1,35 @@
+# LAYER 1: The Name of this specific automation
 name: SRE Automation Project
 
+# LAYER 2: The "Trigger" (When should the robot wake up?)
 on:
   push:
+    # Wake up whenever I send new code to the 'main' folder
     branches: [main]
   workflow_dispatch:
+    # This adds a "Run Now" button in the GitHub UI so I can test it manually
 
+# LAYER 3: The "Job" (What is the big task we are doing?)
 jobs:
-  run_health_check:     # This is the "Parent"
+  run_health_check:
+    # Tell GitHub to borrow a computer from their data center
     runs-on: ubuntu-latest
-    steps:              # This must be indented 4 spaces (under the job)
-      - name: Grab my code
-        uses: actions/checkout@v4
+    
+    # LAYER 4: The "Steps" (The specific to-do list for that computer)
+    # IMPORTANT: Notice these are indented 4 spaces to stay "inside" the job!
+    steps:
+      - name: 1. Grab my code from GitHub
+        uses: actions/checkout@v4 # This is a pre-built tool that downloads your files
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - name: 2. Prepare the Python environment
+        uses: actions/setup-python@v5 # This is a pre-built tool that installs Python
         with:
           python-version: '3.10'
 
-      - name: Install Tools
+      - name: 3. Install the 'Requests' library
+        # We need this so our script can talk to the internet
         run: pip install requests
 
-      - name: Run the Script
+      - name: 4. Execute the Health Check script
+        # This is the command you used to run on your own laptop!
         run: python check_site.py
-        
