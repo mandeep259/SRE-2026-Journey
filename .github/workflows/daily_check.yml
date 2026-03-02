@@ -33,3 +33,5 @@ jobs:
       - name: 4. Execute the Health Check script
         # This is the command you used to run on your own laptop!
         run: python check_site.py
+        env:
+          MY_ACCESS_KEY: ${{secrets.MY_VERY_SECRET_KEY}}

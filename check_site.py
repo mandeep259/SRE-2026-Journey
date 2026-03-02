@@ -1,4 +1,10 @@
 import requests # This is a "tool" that lets Python talk to the internet
+import os # 'os' is the tool to talk to the computer's settings
+
+# Grab the secret from the computer's 'environment'
+secret_key = os.getenv('MY_ACCESS_KEY')
+
+print(f"SRE Security Check: I found a secret key of length {len(secret_key)}")
 
 # This is our target
 #url = "https://www.google.com"
