@@ -1,25 +1,25 @@
-name : SRE Automation Project
+name: SRE Automation Project
 
-on: 
+on:
   push:
-    branches: [main, feature/*]
+    branches: [main]
   workflow_dispatch:
 
-jobs: 
-  run_health_check:
+jobs:
+  run_health_check:     # This is the "Parent"
     runs-on: ubuntu-latest
+    steps:              # This must be indented 4 spaces (under the job)
+      - name: Grab my code
+        uses: actions/checkout@v4
 
-  steps:
-    - name: Grab my code
-      uses: actions/checkout@v4
-    
-    - name: Setup Python
-      uses: actions/setup-python@v5
-      with: 
-        python-version: '3.10'
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
 
-    - name: Install Tools
-      run: pip install requests 
+      - name: Install Tools
+        run: pip install requests
 
-    - name: Run the Script
-      run: python check_site.py
+      - name: Run the Script
+        run: python check_site.py
+        
