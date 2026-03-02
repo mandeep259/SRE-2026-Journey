@@ -3,7 +3,7 @@ name : SRE Automation Project
 on: 
   push:
     branches: [main, feature/*]
-  workflow_dispatche:
+  workflow_dispatch:
 
 jobs: 
   run_health_check:
