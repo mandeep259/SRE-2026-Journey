@@ -9,17 +9,17 @@ jobs:
   run_health_check:
     runs-on: ubuntu-latest
 
-steps:
-  - name: Grab my code
-    uses: actions/checkout@v4
+  steps:
+    - name: Grab my code
+      uses: actions/checkout@v4
     
-  - name: Setup Python
-    uses: actions/setup-python@v5
-    with: 
-      python-version: '3.10'
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with: 
+        python-version: '3.10'
 
-  - name: Install Tools
-    run: pip install requests 
+    - name: Install Tools
+      run: pip install requests 
 
-  - name: Run the Script
-    run: python check_site.py
+    - name: Run the Script
+      run: python check_site.py
