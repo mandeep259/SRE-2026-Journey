@@ -1,0 +1,108 @@
+03-10@15:24:28,0823 DEBUG {pool-1-thread-6} AppFxns:64 - [23_62313433041266670][249118372569] >>in setProfile msisdn [249118372569] interface [Y] planInd [1] langId [1] actionId [23] updatedBy [EXT] subType  [N]
+03-10@15:24:28,0823  INFO {pool-1-thread-6} DBOperations:2532 - [23_62313433041266670][249118372569] >>in exceute transaction action [CHECK]
+03-10@15:24:28,0824 DEBUG {pool-1-thread-6} AppFxns:79 - [23_62313433041266670][249118372569] >> checking in Transaction_detail : [0]
+03-10@15:24:28,0824  INFO {pool-1-thread-6} DBOperations:2532 - [23_62313433041266670][249118372569] >>in exceute transaction action [INSERT]
+03-10@15:24:28,0826  INFO {pool-1-thread-6} AppFxns:89 - [23_62313433041266670][249118372569] >>Request inserted in transaction detail with status [PENDING] and retval[1]
+03-10@15:24:28,0826 DEBUG {pool-1-thread-6} AppFxns:5235 - [23_62313433041266670][249118372569] >>updatedBy[EXT]unSubReason[0]days[8]startTime[2500]endTime[2500]groupName[NA]walletName[-1]advanceOption[NA]p_date[NA]filePath[NA]catId[0]callId[-1]walletId[-1]occasion[NA]referenceId[NA]packId[-1]hlrReqType[3]planName[DEFAULT]systemWalletId[-1]contentType[-1] renewStatus [N]
+03-10@15:24:28,0826 DEBUG {pool-1-thread-6} AppFxns:132 - [23_62313433041266670][249118372569] >>plan id [1]rbtCode [31785] friendMsisdn :[NA]
+03-10@15:24:28,0826 DEBUG {pool-1-thread-6} AppFxns:134 - [23_62313433041266670][249118372569] >>set the profile
+03-10@15:24:28,0826  INFO {pool-1-thread-6} AppFxns:149 - [23_62313433041266670][249118372569] >>in checkForSubscription
+03-10@15:24:28,0826 DEBUG {pool-1-thread-6} DBOperations:37 - [23_62313433041266670][249118372569] >>Procedure Name CheckForSubscription
+03-10@15:24:28,0826 DEBUG {pool-1-thread-6} DBOperations:359 - [23_62313433041266670][249118372569] >>in Arguments msisdn:[249118372569] max subs:[2000000] plan[1]
+03-10@15:24:30,0818  INFO {pool-1-thread-6} DBOperations:373 - [23_62313433041266670][249118372569] >>[CheckForSubscription] in Arguments msisdn:[249118372569] max subs:[2000000] plan:[1] planName:[DEFAULT] oldPlanId[-1] >>>> out params status : [1]
+03-10@15:24:30,0819  INFO {pool-1-thread-6} AppFxns:152 - [23_62313433041266670][249118372569] >>checkForSubscription status as [1]
+03-10@15:24:30,0819  INFO {pool-1-thread-6} AppFxns:189 - [23_62313433041266670][249118372569] >>in checkPrepaidStatus
+03-10@15:24:30,0819 DEBUG {pool-1-thread-6} AppFxns:191 - [23_62313433041266670][249118372569] >>in checkPrepaidStatus || subTypeSource[3]
+03-10@15:24:30,0819 DEBUG {pool-1-thread-6} AppFxns:2581 - [23_62313433041266670][249118372569] >>in getStatusString : getting integer value as [1101]
+03-10@15:24:30,0820  INFO {pool-1-thread-6} AppFxns:411 - [23_62313433041266670][249118372569] >>in sendRequestToHLR
+03-10@15:24:30,0820 DEBUG {pool-1-thread-6} AppFxns:437 - [23_62313433041266670][249118372569] >>send_request_to_hlr_type :[1]
+03-10@15:24:30,0820  INFO {pool-1-thread-6} AppFxns:445 - [23_62313433041266670][249118372569] >>sending Request to HLR [10.55.196.101:8778] send_request_to_hlr_type[1]
+03-10@15:24:30,0820 DEBUG {pool-1-thread-6} AppFxns:448 - [23_62313433041266670][249118372569] >>calling fetchMsrn
+03-10@15:24:30,0857 DEBUG {pool-1-thread-6} AppFxns:497 - [23_62313433041266670][249118372569] >>responseCode[2]deleteTxn[-1]insertTransaction[false]requestAlreadyExist[false]terminateRequest[false]
+03-10@15:24:30,0857  INFO {pool-1-thread-6} AppFxns:555 - [23_62313433041266670][249118372569] >>successfully got response from HLR [2] hlrReqType[3]isprepaid[false]
+03-10@15:24:30,0858  INFO {pool-1-thread-6} AppFxns:3170 - [23_62313433041266670][249118372569] >>in checkAndFindRatePlan
+03-10@15:24:30,0858 DEBUG {pool-1-thread-6} DBOperations:37 - [23_62313433041266670][249118372569] >>Procedure Name CheckAndFindRatePlan
+03-10@15:24:30,0858 DEBUG {pool-1-thread-6} DBOperations:1879 - [23_62313433041266670][249118372569] >>in Arguments msisdn:[249118372569]subType:[P] plan:[1] planName:[DEFAULT] oldPlan:[-1]
+03-10@15:24:30,0862  INFO {pool-1-thread-6} DBOperations:1901 - [23_62313433041266670][249118372569] >>[CheckAndFindRatePlan] in Arguments msisdn:[249118372569]subType:[P]planName:[DEFAULT] >>>> out params status : [9] planId:[1]
+03-10@15:24:30,0862  INFO {pool-1-thread-6} AppFxns:3172 - [23_62313433041266670][249118372569] >>checkAndFindRatePlan status [9]
+03-10@15:24:30,0863  INFO {pool-1-thread-6} AppFxns:3197 - [23_62313433041266670][249118372569] >>in doSubscriptionCharging
+03-10@15:24:30,0863 DEBUG {pool-1-thread-6} DBOperations:37 - [23_62313433041266670][249118372569] >>Procedure Name CheckForPromoUser
+03-10@15:24:30,0863 DEBUG {pool-1-thread-6} DBOperations:3883 - [23_62313433041266670][249118372569] >>Executing procedure:[CheckForPromoUser] for promotion in Arguments MSISDN:[249118372569] operation id:[4], country code[249].
+03-10@15:24:30,0865  INFO {pool-1-thread-6} DBOperations:3899 - [23_62313433041266670][249118372569] >>Ending procedure:[CheckForPromoUser] for promotion in Arguments msisdn:[249118372569] operation id:[4], country code[249]  >>>> out params status:[1]  promo id :[-1] promo status:[null].
+03-10@15:24:30,0865  INFO {pool-1-thread-6} AppFxns:3214 - [23_62313433041266670][249118372569] >>Procedure checkForPromoUser status [1]  packRbtOp [4] packId[-1]
+03-10@15:24:30,0865  INFO {pool-1-thread-6} AppFxns:6429 - [23_62313433041266670][249118372569] >>in checkForDefaultPromo
+03-10@15:24:30,0865 DEBUG {pool-1-thread-6} DBOperations:37 - [23_62313433041266670][249118372569] >>Procedure Name CheckForDefaultPromo
+03-10@15:24:30,0865 DEBUG {pool-1-thread-6} DBOperations:3920 - [23_62313433041266670][249118372569] >>Executing procedure:[CheckForDefaultPromo] for promotion in Arguments msisdn:[249118372569], promo type:[SUB], user consent:[0], country code[249].
+03-10@15:24:30,0866  INFO {pool-1-thread-6} DBOperations:3934 - [23_62313433041266670][249118372569] >>Ending procedure:[CheckForDefaultPromo] for promotion in Arguments msisdn:[249118372569], promo type:[SUB], user consent:[0], country code[249]  >>>> out params status:[1], promo id:[-1].
+03-10@15:24:30,0867  INFO {pool-1-thread-6} AppFxns:6437 - [23_62313433041266670][249118372569] >>checkForDefaultPromo status [1] and pack id [-1]
+03-10@15:24:30,0867  INFO {pool-1-thread-6} AppFxns:3252 - [23_62313433041266670][249118372569] >> Procedure checkForDefaultPromo status [1]  packRbtOp [4] packId[-1]
+03-10@15:24:30,0867  INFO {pool-1-thread-6} AppFxns:3352 - [23_62313433041266670][249118372569] >> No promo is available for MSISDN [249118372569].
+03-10@15:24:30,0867  INFO {pool-1-thread-6} AppFxns:3359 - [23_62313433041266670][249118372569] >>chg string [4:30;141:20;143:15;145:10;147:7;149:3;151:1]
+03-10@15:24:30,0867  INFO {pool-1-thread-6} AppFxns:1281 - [23_62313433041266670][249118372569] >>in sendRequestToSubEngine || seEnable : false || ReqGift Status : [false] || testCase[0] chgString[4:30;141:20;143:15;145:10;147:7;149:3;151:1]chgActionId[1]
+03-10@15:24:30,0867  INFO {pool-1-thread-6} AppFxns:1391 - [23_62313433041266670][249118372569] >> sending request to Charging Server [IP:PORT] [10.55.196.101:10101]
+03-10@15:24:30,0868 DEBUG {pool-1-thread-6} AppFxns:1421 - [23_62313433041266670][249118372569] >>sending request to Charging >> msisdn[249118372569]interface[Y]subtype[P]packId[-1]tariff[4:30;141:20;143:15;145:10;147:7;149:3;151:1]Action[1]rbtCode[31785]fmsisdn[NA]reqType[1]txnId[23_62313433041266670]CORP_ID[-1]profile[0100000001500500000004313030320800000001340b00000001310c00000001310d0000002b343a33303b3134313a32303b3134333a31353b3134353a31303b3134373a373b3134393a333b3135313a310f000000013011000000023233120000000c32343931313833373235363913000000034348471400000005333137383518000000034558541c00000001301e00000001592c000000022d31]
+03-10@15:24:30,0899  INFO {pool-1-thread-6} AppFxns:1451 - [23_62313433041266670][249118372569] >>response from Charging : [30] amount[141844.0]
+03-10@15:24:30,0900  INFO {pool-1-thread-6} AppFxns:1462 - [23_62313433041266670][249118372569] >>charging responseCode [30] responseType [NA]
+03-10@15:24:30,0900 DEBUG {pool-1-thread-6} AppFxns:1519 - [23_62313433041266670][249118372569] >>responseCode[30]lowBalanceException[false]deleteTxn[-1]insertTransaction[false]requestAlreadyExist[false]terminateRequest[false]
+03-10@15:24:30,0900  INFO {pool-1-thread-6} AppFxns:1583 - [23_62313433041266670][249118372569] >>charging successful : [30]
+03-10@15:24:30,0900  INFO {pool-1-thread-6} AppFxns:1590 - [23_62313433041266670][249118372569] >>got from charging || chargingCode[4] and validity days[30]
+03-10@15:24:30,0901  INFO {pool-1-thread-6} AppFxns:1757 - [23_62313433041266670][249118372569] >>in doActionAnalysis || actionRenewSub[-1] actionRenewRBT[-1]
+03-10@15:24:30,0901  INFO {pool-1-thread-6} AppFxns:2144 - [23_62313433041266670][249118372569] >>in subscribe
+03-10@15:24:30,0901 DEBUG {pool-1-thread-6} DBOperations:37 - [23_62313433041266670][249118372569] >>Procedure Name Subscribe
+03-10@15:24:30,0901 DEBUG {pool-1-thread-6} DBOperations:584 - [23_62313433041266670][249118372569] >>in Arguments msisdn:[249118372569]planId:[1]langId:[1]interface:[Y]updatedBy:[EXT]subtype:[P]passwd:[664]txnId:[23_62313433041266670]chgCode:[4]validity:[30]packSub:[-1]
+03-10@15:24:30,0955  INFO {pool-1-thread-6} DBOperations:612 - [23_62313433041266670][249118372569] >>[Subscribe] in Arguments msisdn:[249118372569]planId:[1]langId:[1]interface:[Y]updatedBy:[EXT]subtype:[P]passwd:[664]txnId:[23_62313433041266670]chgCode:[4]validity:[30]packSub:[-1] >>>> out params status : [8] scdr_id : [516216835]
+03-10@15:24:30,0955 DEBUG {pool-1-thread-6} AppFxns:2147 - [23_62313433041266670][249118372569] >>Subscribe procedure result as [8]
+03-10@15:24:30,0956  INFO {pool-1-thread-6} AppFxns:2207 - [23_62313433041266670][249118372569] >>crbtRatePlanParser value : [300]
+03-10@15:24:30,0956  INFO {pool-1-thread-6} AppFxns:2741 - [23_62313433041266670][249118372569] >>in buildsms
+03-10@15:24:30,0956 DEBUG {pool-1-thread-6} AppFxns:2747 - [23_62313433041266670][249118372569] >>in buildsms || templateId [300] message [عزيزي المشترك، شكرًا لك على اشتراكك في خدمة أحلى نغمة لمدة $(days) يوم. يمكنك إدارة حسابك عبر الرابط: crbt.sudani.sd كلمة المرور هي $(password).]
+03-10@15:24:30,0956  INFO {pool-1-thread-6} AppFxns:623 - [23_62313433041266670][249118372569] >>in checkRbtCode
+03-10@15:24:30,0956 DEBUG {pool-1-thread-6} DBOperations:37 - [23_62313433041266670][249118372569] >>Procedure Name CheckRbtCode
+03-10@15:24:30,0956 DEBUG {pool-1-thread-6} DBOperations:853 - [23_62313433041266670][249118372569] >>in Arguments msisdn : [249118372569] rbtCode : [31785]
+03-10@15:24:30,0958 DEBUG {pool-1-thread-6} DBOperations:881 - [23_62313433041266670][249118372569] >> in checkRBTCode charging code string fetched is [-1]
+03-10@15:24:30,0958  WARN {pool-1-thread-6} DBOperations:890 - [23_62313433041266670][249118372569] >> in checkRBTCode error while parsing charging code of RBT, charging code fetched is [-1]
+03-10@15:24:30,0958  INFO {pool-1-thread-6} DBOperations:896 - [23_62313433041266670][249118372569] >> in checkRBTCode charging code [-1] charging string [NA] of this RBT
+03-10@15:24:30,0958  INFO {pool-1-thread-6} DBOperations:913 - [23_62313433041266670][249118372569] >>[CheckRbtCode] in Arguments msisdn : [249118372569] rbtCode : [31785] >>>> out params status : [-27] charging code : [-1] catID : [21] cpID : [802]
+03-10@15:24:30,0958 DEBUG {pool-1-thread-6} DBOperations:37 - [23_62313433041266670][249118372569] >>Procedure Name CheckForPromoUser
+03-10@15:24:30,0959 DEBUG {pool-1-thread-6} DBOperations:3883 - [23_62313433041266670][249118372569] >>Executing procedure:[CheckForPromoUser] for promotion in Arguments MSISDN:[249118372569] operation id:[1], country code[249].
+03-10@15:24:30,0960  INFO {pool-1-thread-6} DBOperations:3899 - [23_62313433041266670][249118372569] >>Ending procedure:[CheckForPromoUser] for promotion in Arguments msisdn:[249118372569] operation id:[1], country code[249]  >>>> out params status:[1]  promo id :[-1] promo status:[null].
+03-10@15:24:30,0960  INFO {pool-1-thread-6} AppFxns:647 - [23_62313433041266670][249118372569] >>Procedure CheckRbtCode status as [-27] checkForPromoUser status [1]  packRbtOp [1] packId[-1]
+03-10@15:24:30,0960  INFO {pool-1-thread-6} AppFxns:6429 - [23_62313433041266670][249118372569] >>in checkForDefaultPromo
+03-10@15:24:30,0960 DEBUG {pool-1-thread-6} DBOperations:37 - [23_62313433041266670][249118372569] >>Procedure Name CheckForDefaultPromo
+03-10@15:24:30,0961 DEBUG {pool-1-thread-6} DBOperations:3920 - [23_62313433041266670][249118372569] >>Executing procedure:[CheckForDefaultPromo] for promotion in Arguments msisdn:[249118372569], promo type:[RBT], user consent:[0], country code[249].
+03-10@15:24:30,0962  INFO {pool-1-thread-6} DBOperations:3934 - [23_62313433041266670][249118372569] >>Ending procedure:[CheckForDefaultPromo] for promotion in Arguments msisdn:[249118372569], promo type:[RBT], user consent:[0], country code[249]  >>>> out params status:[1], promo id:[-1].
+03-10@15:24:30,0962  INFO {pool-1-thread-6} AppFxns:6437 - [23_62313433041266670][249118372569] >>checkForDefaultPromo status [1] and pack id [-1]
+03-10@15:24:30,0962  INFO {pool-1-thread-6} AppFxns:694 - [23_62313433041266670][249118372569] >>Procedure CheckRbtCode status as [-27] checkForDefaultPromo status [1]  packRbtOp [1] packId[-1]
+03-10@15:24:30,0962 DEBUG {pool-1-thread-6} AppFxns:890 - [23_62313433041266670][249118372569] >>in CRE_DIFF_CHG_ENABLED [-1]
+03-10@15:24:30,0962 DEBUG {pool-1-thread-6} AppFxns:895 - [23_62313433041266670][249118372569] >>in CRE_DIFF_CHG_ENABLED [-1] < 0
+03-10@15:24:30,0962 DEBUG {pool-1-thread-6} AppFxns:908 - [23_62313433041266670][249118372569] >>in CRE_DIFF_CHG_ENABLED [-1] < 0 and l_tempValue is null
+03-10@15:24:30,0962 DEBUG {pool-1-thread-6} AppFxns:919 - [23_62313433041266670][249118372569] >>in CRE_DIFF_CHG_ENABLED [-1] < 0 and l_tempValue is null and advance normal plan enable
+03-10@15:24:30,0962 DEBUG {pool-1-thread-6} AppFxns:932 - [23_62313433041266670][249118372569] >>in CRE_DIFF_CHG_ENABLED [-1] < 0 reqForGift disable
+03-10@15:24:30,0962 DEBUG {pool-1-thread-6} AppFxns:941 - [23_62313433041266670][249118372569] >>charging string [6:30;9:20;12:15;15:10;18:7;21:3;24:1]
+03-10@15:24:30,0962  INFO {pool-1-thread-6} AppFxns:1281 - [23_62313433041266670][249118372569] >>in sendRequestToSubEngine || seEnable : false || ReqGift Status : [false] || testCase[0] chgString[6:30;9:20;12:15;15:10;18:7;21:3;24:1]chgActionId[3]
+03-10@15:24:30,0962  INFO {pool-1-thread-6} AppFxns:1391 - [23_62313433041266670][249118372569] >> sending request to Charging Server [IP:PORT] [10.55.196.101:10101]
+03-10@15:24:30,0962 DEBUG {pool-1-thread-6} AppFxns:1421 - [23_62313433041266670][249118372569] >>sending request to Charging >> msisdn[249118372569]interface[Y]subtype[P]packId[-1]tariff[6:30;9:20;12:15;15:10;18:7;21:3;24:1]Action[3]rbtCode[31785]fmsisdn[NA]reqType[1]txnId[23_62313433041266670]CORP_ID[-1]profile[0100000001500500000004313030300800000001310b00000001310c00000001310d00000024363a33303b393a32303b31323a31353b31353a31303b31383a373b32313a333b32343a310f000000023231100000000338303211000000023233120000000c32343931313833373235363913000000034348471400000005333137383518000000034558541e00000001591f000000efbfbdd8b9d8b2d98ad8b2d98a20d8a7d984d985d8b4d8aad8b1d983d88c20d8b4d983d8b1d98bd8a720d984d98320d8b9d984d98920d8a7d8b4d8aad8b1d8a7d983d98320d981d98a20d8aed8afd985d8a920d8a3d8add984d98920d986d8bad985d8a920d984d985d8afd8a920333020d98ad988d9852e20d98ad985d983d986d98320d8a52c000000022d31]
+03-10@15:24:30,0990  INFO {pool-1-thread-6} AppFxns:1451 - [23_62313433041266670][249118372569] >>response from Charging : [30] amount[70922.0]
+03-10@15:24:30,0991  INFO {pool-1-thread-6} AppFxns:1462 - [23_62313433041266670][249118372569] >>charging responseCode [30] responseType [NA]
+03-10@15:24:30,0991 DEBUG {pool-1-thread-6} AppFxns:1519 - [23_62313433041266670][249118372569] >>responseCode[30]lowBalanceException[false]deleteTxn[-1]insertTransaction[false]requestAlreadyExist[false]terminateRequest[false]
+03-10@15:24:30,0991  INFO {pool-1-thread-6} AppFxns:1583 - [23_62313433041266670][249118372569] >>charging successful : [30]
+03-10@15:24:30,0991  INFO {pool-1-thread-6} AppFxns:1590 - [23_62313433041266670][249118372569] >>got from charging || chargingCode[6] and validity days[30]
+03-10@15:24:30,0991  INFO {pool-1-thread-6} AppFxns:1757 - [23_62313433041266670][249118372569] >>in doActionAnalysis || actionRenewSub[-1] actionRenewRBT[-1]
+03-10@15:24:30,0992  INFO {pool-1-thread-6} AppFxns:2356 - [23_62313433041266670][249118372569] >>in setDefaultRbt
+03-10@15:24:30,0992 DEBUG {pool-1-thread-6} DBOperations:37 - [23_62313433041266670][249118372569] >>Procedure Name SetDefaultRbt
+03-10@15:24:30,0992 DEBUG {pool-1-thread-6} DBOperations:625 - [23_62313433041266670][249118372569] >>in Arguments msisdn:[249118372569]interface:[Y]updatedBy:[EXT]subtype:[P]rbtCode:[31785]days:[8]startTime:[2500]endTime:[2500]chgDone:[1]txnId:[23_62313433041266670]chgCode:[6]validity:[30]packId:[-1]
+03-10@15:24:44,0722 DEBUG {pool-1-thread-6} DBOperations:661 - [23_62313433041266670][249118372569] >>no need to update the Setting String
+03-10@15:24:44,0722  INFO {pool-1-thread-6} DBOperations:669 - [23_62313433041266670][249118372569] >>[SetDefaultRbt] in Arguments msisdn:[249118372569]interface:[Y]updatedBy:[EXT]subtype:[P]rbtCode:[31785]days:[8]startTime:[2500]endTime:[2500]chgDone:[1]txnId:[23_62313433041266670]chgCode:[6]validity:[30]packId:[-1] >>>> out params status : [5] scdr_id : [516216836]
+03-10@15:24:44,0722 DEBUG {pool-1-thread-6} AppFxns:2359 - [23_62313433041266670][249118372569] >>setDefaultRbt procedure result as [5]
+03-10@15:24:44,0723  INFO {pool-1-thread-6} AppFxns:2505 - [23_62313433041266670][249118372569] >>in sendSms
+03-10@15:24:44,0723 DEBUG {pool-1-thread-6} AppFxns:2539 - [23_62313433041266670][249118372569] >>smsMsisdn[NA] msisdn[249118372569] message is [عزيزي المشترك، شكرًا لك على اشتراكك في خدمة أحلى نغمة لمدة 30 يوم. يمكنك إدارة حسابك عبر الرابط: crbt.sudani.sd كلمة المرور هي 664.]
+03-10@15:24:44,0723  INFO {pool-1-thread-6} DBOperations:2444 - [23_62313433041266670][249118372569] >>Inside Function sendSMS()
+03-10@15:24:44,0723 DEBUG {pool-1-thread-6} DBOperations:2449 - [23_62313433041266670][249118372569] >> SMS TABLE QUERY [insert into GMAT_MESSAGE_STORE(RESPONSE_ID,ORIGINATING_NUMBER,DESTINATION_NUMBER,MESSAGE_TEXT,SUBMIT_TIME,STATUS,FORMAT)values(0,?,?,?,now(),?,1)]
+03-10@15:24:44,0728  INFO {pool-1-thread-6} AppFxns:2544 - [23_62313433041266670][249118372569] >>sms successfully sent with smsOrig[2020]
+03-10@15:24:44,0728  INFO {pool-1-thread-6} AppFxns:596 - [23_62313433041266670][249118372569] >>in getResponseString
+03-10@15:24:44,0728 DEBUG {pool-1-thread-6} AppFxns:610 - [23_62313433041266670][249118372569] >>response code [0] response string as : [SUCCESS]
+03-10@15:24:44,0728  INFO {pool-1-thread-6} AppFxns:2052 - [23_62313433041266670][249118372569] >>inside endState deleteTxn[-1]
+03-10@15:24:44,0728 DEBUG {pool-1-thread-6} AppFxns:2088 - [23_62313433041266670][249118372569] >>deleting transaction detail
+03-10@15:24:44,0728  INFO {pool-1-thread-6} DBOperations:2532 - [23_62313433041266670][249118372569] >>in exceute transaction action [DELETE]
+03-10@15:24:44,0731  INFO {pool-1-thread-6} AppFxns:2095 - [23_62313433041266670][249118372569] >>txn detail delete status : [1]
+03-10@15:24:44,0731  INFO {pool-1-thread-6} AppFxns:596 - [23_62313433041266670][249118372569] >>in getResponseString
+03-10@15:24:44,0731 DEBUG {pool-1-thread-6} AppFxns:610 - [23_62313433041266670][249118372569] >>response code [0] response string as : [SUCCESS]
